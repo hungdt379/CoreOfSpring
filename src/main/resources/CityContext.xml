@@ -7,7 +7,12 @@
     <bean id="hanoi" class="com.example.coreofspring.entity.City">
         <constructor-arg name="name" value="Hanoi"/>
         <constructor-arg name="population" value="1000"/>
-        <constructor-arg name="country" ref="vietnam"/>
+        <!-- 1 ref bean -->
+        <!--<constructor-arg name="country" ref="vietnam"/>-->
+        <!-- 2 ref bean -->
+        <constructor-arg name="country">
+            <ref bean="vietnam"/>
+        </constructor-arg>
     </bean>
 
     <alias name="hanoi" alias="hanoian"/>
