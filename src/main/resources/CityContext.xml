@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <import resource="CountryContext.xml"/>
+
+    <bean id="hanoi" class="com.example.coreofspring.entity.City">
+        <constructor-arg name="name" value="Hanoi"/>
+        <constructor-arg name="population" value="1000"/>
+        <constructor-arg name="country" ref="vietnam"/>
+    </bean>
+
+    <alias name="hanoi" alias="hanoian"/>
+</beans>
