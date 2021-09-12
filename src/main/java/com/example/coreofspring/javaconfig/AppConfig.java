@@ -2,11 +2,11 @@ package com.example.coreofspring.javaconfig;
 
 import org.springframework.context.annotation.*;
 
-//@Configuration
+@Configuration
 public class AppConfig {
 
-//    @Bean
-//    public MyServiceImpl myService(){
-//        return new MyServiceImpl("This is java configuration-based");
-//    }
+    @Bean
+    public MyServiceImpl myService(){
+        return new MyServiceImpl("This is java configuration-based");
+    }
 }
