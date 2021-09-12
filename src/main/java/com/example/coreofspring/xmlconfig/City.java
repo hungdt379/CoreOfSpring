@@ -1,4 +1,4 @@
-package com.example.coreofspring.entity;
+package com.example.coreofspring.xmlconfig;
 
 public class City {
     private String name;

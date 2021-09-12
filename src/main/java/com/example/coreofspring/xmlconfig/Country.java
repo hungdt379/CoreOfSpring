@@ -1,4 +1,4 @@
-package com.example.coreofspring.entity;
+package com.example.coreofspring.xmlconfig;
 
 public class Country {
     private String name;

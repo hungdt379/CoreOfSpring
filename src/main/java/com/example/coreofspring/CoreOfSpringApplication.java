@@ -1,15 +1,13 @@
 package com.example.coreofspring;
 
 import com.example.coreofspring.annotationconfig.Film;
-import com.example.coreofspring.entity.City;
-import com.example.coreofspring.entity.Country;
+import com.example.coreofspring.xmlconfig.City;
+import com.example.coreofspring.xmlconfig.Country;
 import com.example.coreofspring.javaconfig.AppConfig;
 import com.example.coreofspring.javaconfig.MyService;
-import com.example.coreofspring.javaconfig.MyServiceImpl;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication

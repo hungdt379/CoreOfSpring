@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <import resource="CountryContext.xml"/>
 
-    <bean id="hanoi" class="com.example.coreofspring.entity.City">
+    <bean id="hanoi" class="com.example.coreofspring.xmlconfig.City">
         <constructor-arg name="name" value="Hanoi"/>
         <constructor-arg name="population" value="1000"/>
         <!-- 1 ref bean -->
