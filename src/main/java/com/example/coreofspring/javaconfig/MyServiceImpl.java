@@ -21,4 +21,11 @@ public class MyServiceImpl implements MyService {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "MyServiceImpl{" +
+                "message='" + message + '\'' +
+                '}';
+    }
 }
