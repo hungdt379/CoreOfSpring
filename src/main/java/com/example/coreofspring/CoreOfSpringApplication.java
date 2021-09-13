@@ -4,6 +4,7 @@ import com.example.coreofspring.annotationconfig.Film;
 import com.example.coreofspring.annotationconfig.StudioAutowiredConstructor;
 import com.example.coreofspring.annotationconfig.StudioAutowiredProperties;
 import com.example.coreofspring.annotationconfig.StudioAutowiredSetter;
+import com.example.coreofspring.javaconfig.Messenger;
 import com.example.coreofspring.xmlconfig.City;
 import com.example.coreofspring.xmlconfig.Country;
 import com.example.coreofspring.javaconfig.AppConfig;
@@ -45,6 +46,9 @@ public class CoreOfSpringApplication {
         ApplicationContext javaContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MyService myService = javaContext.getBean(MyService.class);
         System.out.println(myService);
+        Messenger messenger = javaContext.getBean(Messenger.class);
+        System.out.println("---Qualifiers---");
+        System.out.println(messenger);
 
         System.out.println("---Annotation-config---");
         ApplicationContext annotationContext = new ClassPathXmlApplicationContext("AnnotationContext.xml");

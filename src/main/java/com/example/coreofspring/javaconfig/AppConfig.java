@@ -1,13 +1,12 @@
 package com.example.coreofspring.javaconfig;
 
 import org.springframework.context.annotation.*;
-import org.springframework.stereotype.Component;
 
-@Configuration
-@ComponentScan(basePackages = "com.example.coreofspring.javaconfig")
+@Configuration // se khai bao mot hoac nhieu bean
+@ComponentScan(basePackages = "com.example.coreofspring.javaconfig") // de biet vao package nao de quet annotation va tao bean
 public class AppConfig {
 
-//    @Bean
+//    @Bean // tat cac cac method bean phai nam trong class Configuration
 //    public MyServiceImpl myService(){
 //        MyServiceImpl myService = new MyServiceImpl();
 //        return myService;
