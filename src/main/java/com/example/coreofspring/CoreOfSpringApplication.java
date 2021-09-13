@@ -44,7 +44,6 @@ public class CoreOfSpringApplication {
         System.out.println("----Java-config----");
         ApplicationContext javaContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MyService myService = javaContext.getBean(MyService.class);
-        myService.setMessage("This is java-annotation config");
         System.out.println(myService);
 
         System.out.println("---Annotation-config---");
@@ -61,6 +60,7 @@ public class CoreOfSpringApplication {
 
         StudioAutowiredProperties studioAutowiredProperties = (StudioAutowiredProperties) annotationContext.getBean("propertiesStudio");
         System.out.println(studioAutowiredProperties);
+
     }
 
 }

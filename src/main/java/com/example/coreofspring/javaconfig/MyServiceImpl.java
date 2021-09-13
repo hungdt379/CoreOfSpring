@@ -1,8 +1,13 @@
 package com.example.coreofspring.javaconfig;
 
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MyServiceImpl implements MyService {
 
+    @Value("My name is Hưng")
     String message;
 
     public MyServiceImpl(String message) {

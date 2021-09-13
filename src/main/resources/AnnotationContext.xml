@@ -12,12 +12,11 @@
     <bean id="setName" class="com.example.coreofspring.annotationconfig.Film">
         <property name="name" value="Avengers"/>
     </bean>
-    <bean id="setNameSpiderMan" class="com.example.coreofspring.annotationconfig.Film">
+    <bean id="setNameSpiderMan" class="com.example.coreofspring.annotationconfig.Film" primary="true">
         <property name="name" value="Spider-Man"/>
     </bean>
     <bean id="constructorStudio" class="com.example.coreofspring.annotationconfig.StudioAutowiredConstructor">
         <constructor-arg name="studioName" value="Marvel"/>
-        <constructor-arg name="film" ref="setName"/>
     </bean>
     <bean id="setterStudio" class="com.example.coreofspring.annotationconfig.StudioAutowiredSetter">
         <property name="studioName" value="Marvel"/>
