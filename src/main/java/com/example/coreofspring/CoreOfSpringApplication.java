@@ -9,16 +9,13 @@ import com.example.coreofspring.xmlconfig.City;
 import com.example.coreofspring.xmlconfig.Country;
 import com.example.coreofspring.javaconfig.AppConfig;
 import com.example.coreofspring.javaconfig.MyService;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 
 @SpringBootApplication
@@ -49,6 +46,7 @@ public class CoreOfSpringApplication {
         Messenger messenger = javaContext.getBean(Messenger.class);
         System.out.println("---Qualifiers---");
         System.out.println(messenger);
+        ((ConfigurableApplicationContext)javaContext).close();
 
         System.out.println("---Annotation-config---");
         ApplicationContext annotationContext = new ClassPathXmlApplicationContext("AnnotationContext.xml");

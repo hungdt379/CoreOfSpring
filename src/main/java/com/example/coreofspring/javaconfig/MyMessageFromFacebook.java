@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Primary
 public class MyMessageFromFacebook implements MyService{
-    @Value("My message from facebook") // dat gia tri message
+    //@Value("My message from facebook") // dat gia tri message
     private String message;
 
     @Override
